@@ -26,19 +26,17 @@ public class second {
         	
         //find total results and extract number from string
         WebElement resultsEl = driver.findElement(By.id("mBMHK"));
-        //System.out.println(results.getText().split(" ")[1]);
         String resultsStr = resultsEl.getText().split(" ")[1];
         //remove dots from string for conversion
         resultsStr = resultsStr.replaceAll("[.]","");
         
         Integer results = Integer.parseInt(resultsStr);
         Integer controlValue = 777;
-        //System.out.println(results);
-        
-        assertEquals("There is too much cheese on the internet", results, controlValue);
         
         //close browser
         driver.close();	
+        
+        assertEquals("There is too much cheese on the internet", results, controlValue);
+        
 	}
-
 }

@@ -1,5 +1,6 @@
 package tests;
 
+import static org.junit.Assert.*;
 import java.io.File;
 import java.io.IOException;
 
@@ -13,13 +14,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.TakesScreenshot;
 
+import org.junit.Test;
 
-public class firstTest {
+public class first {
 
-
-    public static void main(String[] args) {
-    	
-        // declaration and instantiation of objects/variables
+	@Test
+	public void test() {
+		
+		// declaration and instantiation of objects/variables
     	//System.setProperty("webdriver.gecko.driver","/home/marko/selenium/geckodriver");
 		//WebDriver driver = new FirefoxDriver();
 		
@@ -81,9 +83,10 @@ public class firstTest {
         WebElement tooltip = driver.findElement(By.id("age"));       
         System.out.println(tooltip.getAttribute("title"));
         
-        //close Fire fox
-        //driver.close();	
-       
-    }
+        //close browser
+        driver.close();	
+		
+		
+	}
 
 }

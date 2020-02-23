@@ -1,13 +1,17 @@
 package tests;
 
+import static org.junit.Assert.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class secondTest {
+import org.junit.Test;
 
-	public static void main(String[] args) {
+public class second {
+
+	@Test
+	public void test() {
 		
 		System.setProperty("webdriver.chrome.driver","/home/marko/selenium/chromedriver");
 		WebDriver driver = new ChromeDriver();
@@ -32,8 +36,9 @@ public class secondTest {
         //System.out.println(results);
         
         assertEquals("There is too much cheese on the internet", results, controlValue);
-  
         
+        //close browser
+        driver.close();	
 	}
 
 }

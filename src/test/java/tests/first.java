@@ -38,17 +38,17 @@ public class first {
         searchForm.sendKeys("demoqa.com");
         searchForm.submit();
         
-        //Click on the first result
+        //Click on the first google result
         WebElement firstResult = driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div/div[1]/a/h3"));
         firstResult.click();
         
         //Find Droppable link and navigate to that page
-        WebElement droppable = driver.findElement(By.linkText("Droppable"));
-        droppable.click();
+        WebElement droppableLink = driver.findElement(By.linkText("Droppable"));
+        droppableLink.click();
         
         //Find drag and drop boxes
         WebElement draggable = driver.findElement(By.id("draggable"));
-        droppable = driver.findElement(By.id("droppable"));
+        WebElement droppable = driver.findElement(By.id("droppable"));
  
         //Create an object 'action'
         Actions action = new Actions(driver);

@@ -81,7 +81,7 @@ public class third {
         checkbox.click();
         
         
-        
+        //I had no time to finish this one, sorry...
         
 	}
 
